@@ -196,16 +196,23 @@ def sketch(path):
         draw = ImageDraw.Draw(disp)
         for l in lines:
             draw.line(l,(0,0,0),5)
-        disp.show()
 
+        disp.save(export_path)
+    #!we will remove this below and just add the line above to
+    #!save the file as a png with a white background(more suitable for video)
+    """
     f = open(export_path,'w')
     f.write(makesvg(lines))
     f.close()
+    """
     print(len(lines),"strokes.")
     print("done.")
     return lines
 
-
+    #!as an alternative to our changes
+    #!I think we could alter the writing of
+    #!the svg in this function to create the file
+    #!with a colored background in our case just white
 def makesvg(lines):
     print("generating svg file...")
     out = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1">'

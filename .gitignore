@@ -78,8 +78,10 @@ celerybeat-schedule
 # dotenv
 .env
 # all local images
-*.png
-*.svg
+output/*.svg
+img_output/*.png
+what_to_draw/*.png
+perfect_plan.png
 # virtualenv
 venv/
 ENV/
